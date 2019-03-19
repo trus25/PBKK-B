@@ -1,11 +1,11 @@
 package com.farhan.main;
 import com.farhan.profile.Karyawan;
 import com.farhan.profile.Manager;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import java.util.Scanner;
+@SuppressWarnings("deprecation")
 public class MainApp {
 	public static void main (String[] args) {
 		
@@ -15,19 +15,21 @@ public class MainApp {
 		int choice = myObj.nextInt();  // Read user input
 		
 		if(choice == 1) {
-			Resource resource = new ClassPathResource("Managerbean.xml");
-			BeanFactory factory = new XmlBeanFactory(resource);
-				Manager emps= (Manager) factory.getBean("M1");
-				System.out.println(emps.toString());
+			ClassPathXmlApplicationContext
+			context1 = new ClassPathXmlApplicationContext("Managerbean.xml");
+			Manager manager = context1.getBean("M1",Manager.class);
+			System.out.println(manager.toString());
+			context1.close();
 		}
 		
 		else if(choice == 2) {
-			Resource resource = new ClassPathResource("Karyawanbean.xml");
-			BeanFactory factory = new XmlBeanFactory(resource);
+			ClassPathXmlApplicationContext
+			context2 = new ClassPathXmlApplicationContext("Karyawanbean.xml");
 			for(int i=1;i<6;i++) {
-				Karyawan emps= (Karyawan) factory.getBean("K"+Integer.toString(i));
-				System.out.println(emps.toString());
+				Karyawan karyawan = context2.getBean("K"+Integer.toString(i),Karyawan.class);
+				System.out.println(karyawan.toString());
 			}
+			context2.close();
 		}
 		
 		else {

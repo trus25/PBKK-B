@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XPriaLSchema-instance"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
     xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="K1" class="com.farhan.profile.Karyawan">   
         <!-- collaborators and configuration for this bean go here -->
         <property name="id" value="1"></property>
-        <property name="name" value="Ahmad"></property>
+        <property name="nama" value="Ahmad"></property>
         <property name="alamat" value="Keputih"></property>
         <property name="gender" value="Pria"></property>
         <property name="tahunmasuk" value="2012"></property>
@@ -16,7 +19,7 @@
   	<bean id="K2" class="com.farhan.profile.Karyawan">   
         <!-- collaborators and configuration for this bean go here -->
         <property name="id" value="2"></property>
-        <property name="name" value="Budi"></property>
+        <property name="nama" value="Budi"></property>
         <property name="alamat" value="Mulyosari"></property>
         <property name="gender" value="Pria"></property>
         <property name="tahunmasuk" value="2012"></property>
@@ -25,7 +28,7 @@
   <bean id="K3" class="com.farhan.profile.Karyawan">   
         <!-- collaborators and configuration for this bean go here -->
         <property name="id" value="3"></property>
-        <property name="name" value="Santoso"></property>
+        <property name="nama" value="Santoso"></property>
         <property name="alamat" value="Keputih"></property>
         <property name="gender" value="Pria"></property>
         <property name="tahunmasuk" value="2014"></property>
@@ -34,7 +37,7 @@
   <bean id="K4" class="com.farhan.profile.Karyawan">   
         <!-- collaborators and configuration for this bean go here -->
         <property name="id" value="4"></property>
-        <property name="name" value="Nia"></property>
+        <property name="nama" value="Nia"></property>
         <property name="alamat" value="Keputih"></property>
         <property name="gender" value="Wanita"></property>
         <property name="tahunmasuk" value="2015"></property>
@@ -43,18 +46,11 @@
   <bean id="K5" class="com.farhan.profile.Karyawan">   
         <!-- collaborators and configuration for this bean go here -->
         <property name="id" value="5"></property>
-        <property name="name" value="Anto"></property>
+        <property name="nama" value="Anto"></property>
         <property name="alamat" value="Gebang"></property>
         <property name="gender" value="Pria"></property>
         <property name="tahunmasuk" value="2016"></property>
         <property name="gaji" value="3000000"></property>
     </bean>
-  
-
-    <bean id="..." class="...">
-        <!-- collaborators and configuration for this bean go here -->
-    </bean>
-
-    <!-- more bean definitions go here -->
 
 </beans>
