@@ -11,7 +11,7 @@
 <body>
 	<div class="grandParentContainer">
 	<div class="parentContainer">
-	<form:form class="form-style-4"  method="POST" action="/Tugas3/processForm" modelAttribute="karyawan">
+	<form:form class="form-style-4"  method="POST" action="/Tugas2/processForm" modelAttribute="karyawan">
 	<h2 style="color:white;font-style: bold;text-align:center;">Enter your message here</h2>
 	<table>
 	<tr>

@@ -1,6 +1,6 @@
 Html, body{
 		height:100%;
-		background-color: #88d0fe;
+		background-image: url("../img/background.jpg");
 	}
 
 	.grandParentContainer{
